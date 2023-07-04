@@ -20,7 +20,7 @@
 
 {{-- section la 1 khoi de luu tru du lieu => khong hien thi => dung @yield() de hien thi section do --}}
 @section('frontend_content')
-<h1>beoebeoeoeo</h1>
+<h1>ahihihihi</h1>
 <div class="body-content">
     <div class="container">
         <div class="row">
@@ -34,6 +34,3 @@
     </div>
 </div>
 @endsection
-
-{{-- yield de hien thi section frontend_content --}}
-@yield('frontend_content')

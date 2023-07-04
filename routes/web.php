@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Frontend\FrontendUserProfileController;
+use App\Http\Controllers\Frontend\FrontendPageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\StripeController;
+use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Frontend\CheckoutController;
+use App\Http\Controllers\Frontend\CartPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,15 +46,39 @@ Route::middleware(['auth:web'])->group(function () {
 
 });
 
-// Route::middleware(['auth:admin'])->group(function () {
+//Wishlist routes
+Route::group(['prefix' => 'user'], function () {
+    // // add to wishlist route
+    // Route::post('/add/product/to-wishlist/{product_id}', [WishlistController::class, 'addToWishlist'])->name('addtoWishlist');
+    // // list wishlist route
+    // Route::get('/list/wishlists', [WishlistController::class, 'listWishList'])->name('listWishlist');
+    // // remove from wishlist
+    // Route::get('/remove/from-wishlist/{wish_id}', [WishlistController::class, 'removefromWishList'])->name('removefromWishList');
 
-//     // muon dung class FrontendUserProfileController ?? import Controller FrontendUserProfileController
-//     Route::middleware(['auth:sanctum, admin', 'verified'])->get('/dashboard', [AdminController::class, 'admindashboard'])->name('admindashboard');
-
-// });
+    //stripe payment route
+    Route::post('/stripe/v1/payment', [StripeController::class, 'stripeOrder'])->name('stripe.order');
 
 
+});
 
+// Add to cart Product route
+Route::get('/product/{id}', [FrontendPageController::class, 'productDeatil'])->name('frontend-product-details');
+Route::get('/product/addToCart/{id}', [CartController::class, 'addToCart'])->name('frontend.product.addToCart');
+// Route::delete('/product/delete-cart-product', [CartController::class, 'deleteProduct'])->name('delete.cart.product');
+// Route::patch('/product/update-shopping-cart', [CartController::class, 'updateCart'])->name('update.cart.product');
+
+
+
+// Cart page routes
+Route::get('/my-cart', [CartPageController::class, 'myCartView'])->name('myCartView');
+Route::get('/my-cart/list', [CartPageController::class, 'showmyCartList'])->name('showmyCartList');
+Route::get('/remove/from-cart/{rowId}', [CartPageController::class, 'removeFromCart'])->name('removeFromCart');
+Route::get('/add/in-cart/{rowId}', [CartPageController::class, 'addQtyToCart'])->name('addQtyToCart');
+Route::get('/reduce/from-cart/{rowId}', [CartPageController::class, 'reduceQtyFromCart'])->name('reduceQtyFromCart');
+
+//Checkout page routes
+Route::get('/checkout-page', [CheckoutController::class, 'checkoutPage'])->name('checkout-page');
+Route::post('/checkout-store', [CheckoutController::class, 'checkoutStore'])->name('checkout.store');
 
 //admin
 // route dành khi đã xác thực là role admin

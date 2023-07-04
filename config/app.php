@@ -178,6 +178,7 @@ return [
              * Package Service Providers...
              */
         Intervention\Image\ImageServiceProvider::class,
+       
 
             /*
              * Application Service Providers...
@@ -210,7 +211,8 @@ return [
 
     'aliases' => [
         // 'Example' => App\Facades\Example::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+        
 
     ],
 

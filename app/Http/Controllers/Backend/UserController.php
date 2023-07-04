@@ -80,6 +80,7 @@ class UserController extends Controller
     //             'email' => $request->input('email'),
     //             'phone_number' => $request->input('phone_number'),
     //             'profile_photo_path' => $save_url
+    //             thu cho 'phone_number' 1 gia tri luon, khoi lay tu input xem thu
     //         ]);
     //     } else {
     //         $user->update([
@@ -87,6 +88,7 @@ class UserController extends Controller
     //             'email' => $request->input('email'),
     //             'phone_number' => $request->input('phone_number')
     //             // 'photo_profile_path' => $save_url
+    //             //    kiem tra lai 'phone_number' + ham update([....])
     //         ]);
     //     }
 
@@ -130,8 +132,9 @@ class UserController extends Controller
         return redirect()->route('user.index')->with($notification);
     }
 
-    public function update(Request $request)
+    public function update(UserStoreRequest $request)
     {
+        //dd($request->all());
         //validate() của đối tượng $request để kiểm tra và xác nhận dữ liệu đầu vào từ người dùng.
         $validatedData = $request->validate([
             'name' => 'required',

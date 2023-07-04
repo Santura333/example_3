@@ -19,25 +19,31 @@
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
 
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
 
-        {{-- Header START --}}
-        @include('admin.dashboard_layout.header')
-        {{-- Header END --}}
+        <aside class="main-sidebar">
+            <!-- Left side column. contains the logo and sidebar -->
+            @include('admin.dashboard_layout.aside')
+        </aside>
 
-        <!-- Left side column. contains the logo and sidebar -->
-        @include('admin.dashboard_layout.aside')
+        <header id="content-wrapper" class="d-flex flex-column">
+            {{-- Header START --}}
+            @include('admin.dashboard_layout.header')
+            {{-- Header END --}}
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <div class="container-full">
-                @yield('dashboard_content')
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <div class="container-full">
+                    @yield('dashboard_content')
+                </div>
             </div>
-        </div>
-        <!-- /.content-wrapper -->
+            <!-- /.content-wrapper -->
+        </header>
+
+
 
         {{-- Footer START --}}
-        @include('admin.dashboard_layout.footer')
+        {{-- @include('admin.dashboard_layout.footer') --}}
         {{-- Footer END --}}
 
         <!-- Control Sidebar -->
@@ -45,7 +51,6 @@
         <!-- /.control-sidebar -->
 
         <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
-        <div class="control-sidebar-bg"></div>
 
     </div>
     <!-- ./wrapper -->

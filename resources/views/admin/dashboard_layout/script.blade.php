@@ -1,8 +1,19 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
   integrity="sha512-VK2zcvntEufaimc+efOYi622VN5ZacdnufnmX7zIhCPmjhKnOi9ZDMtg1/ug5l183f19gG1/cBstPO4D8N/Img=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Page level plugins -->
+<script src="{{ asset('vendor') }}/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ asset('vendor') }}/datatables/dataTables.bootstrap4.min.js"></script>
+
+<script src="{{asset('backend/assets/js/sb-admin-2.min.js')}}"></script>
+<script src="{{asset('backend/assets/js/datatables-demo.js')}}"></script>
+
+
 
 {{-- goi tu trang admin.profile.edit --}}
 @yield('dashboard_script')

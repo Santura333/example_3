@@ -2,7 +2,7 @@
 
 @section('dashboard_content')
 <!-- Main content -->
-<section class="content">
+{{-- <section class="content">
     <div class="row">
         <div class="col-xl-2 col-6">
             <div class="box overflow-hidden pull-up">
@@ -1818,6 +1818,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- /.content -->
 @endsection
