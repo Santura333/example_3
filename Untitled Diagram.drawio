@@ -1,0 +1,29 @@
+<mxfile host="app.diagrams.net" modified="2023-07-07T17:36:15.594Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="-FcGWIyoQDNJ-tEDtjsY" version="21.6.1" type="github">
+  <diagram name="Page-1" id="W3ak8eRDTN-PhNuslOiG">
+    <mxGraphModel dx="1050" dy="587" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WiztK65-JUH6tZKQhC4x-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WiztK65-JUH6tZKQhC4x-1" target="WiztK65-JUH6tZKQhC4x-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WiztK65-JUH6tZKQhC4x-4" value="user.edit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WiztK65-JUH6tZKQhC4x-3">
+          <mxGeometry x="-0.0717" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WiztK65-JUH6tZKQhC4x-1" value="All User&lt;br&gt;backend/User/index.blade.php&lt;br&gt;route: resource(&#39;/user&#39;)&lt;br&gt;compact (&#39;user&#39;. adminData)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="74" y="255" width="278" height="139" as="geometry" />
+        </mxCell>
+        <mxCell id="WiztK65-JUH6tZKQhC4x-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WiztK65-JUH6tZKQhC4x-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1131.60009765625" y="324.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WiztK65-JUH6tZKQhC4x-2" value="edit.blade" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="825" y="294.5" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
