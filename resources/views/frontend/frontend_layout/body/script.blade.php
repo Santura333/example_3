@@ -3,11 +3,11 @@
 <!-- For demo purposes – can be removed on production : End -->
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="{{ asset('frontend') }}/assets/js/bootstrap.min.js"></script>
+{{-- <script src="{{ asset('frontend') }}/assets/js/bootstrap.min.js"></script> --}}
 
 <script src="{{ asset('frontend') }}/assets/js/owl.carousel.min.js"></script>
 
-<script src="{{ asset('frontend') }}/assets/js/jquery.easing-1.3.min.js"></script>
+
 {{-- thu vien sweet alert, dung o function incrementQuantity tai mycart_view.blade.php --}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -38,3 +38,18 @@
 @endif
 </script>
 @yield('frontend_script')
+
+
+{{-- dang --}}
+<script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('vendor') }}/owlcarousel/owl.carousel.min.js"></script>
+<script src="{{ asset('vendor') }}/jquery-easing/easing.min.js"></script>
+<script src="{{ asset('vendor') }}/wow/wow.min.js"></script>
+<script src="{{ asset('vendor') }}/waypoints/waypoints.min.js"></script>
+<script src="{{ asset('vendor') }}/counterup/counterup.min.js"></script>
+
+<script src="{{ asset('frontend') }}/assets/js/main.js"></script>
+
+
+
+{{-- <script src="{{ asset('frontend') }}/assets/js/jquery.easing-1.3.min.js"></script> --}}

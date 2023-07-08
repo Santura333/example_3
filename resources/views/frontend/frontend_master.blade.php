@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{{ asset('frontend/img/logo.png') }}">
+
     {{-- link css assest +bootstrap+ font --}}
     @include('frontend.frontend_layout.body.style')
 
@@ -14,7 +17,13 @@
 
 
 <body class="cnt-home">
-    <h3>FrontEndMaster</h3>
+
+    <header>
+        @include('frontend.frontend_layout.body.header')
+    </header>
+
+
+    @include('frontend.frontend_layout.body.aside')
 
     {{-- tu section product-page.blade.php --}}
     {{-- mycart_view cung co frontend_contend, nhu the nao thi thuc chat hien thi ra o moi trang la master_layout, va
@@ -30,7 +39,7 @@
 
 
     <footer>
-        <h3>FrontEndMaster Footer</h3>
+        @include('frontend.frontend_layout.body.footer')
     </footer>
 
 

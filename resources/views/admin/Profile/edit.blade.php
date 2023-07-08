@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <h5>File Input Field <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                        <input type="file" name="image" id="image" class="form-control" required="">
+                                        <input type="file" name="image" id="image" class="form-control">
                                         <div class="help-block"></div>
                                     </div>
                                 </div>

@@ -5,13 +5,21 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!-- Page level plugins -->
+<script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('vendor') }}/datatables/jquery.dataTables.min.js"></script>
 <script src="{{ asset('vendor') }}/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="{{ asset('vendor') }}/chart.js/Chart.min.js"></script>
 
 <script src="{{asset('backend/assets/js/sb-admin-2.min.js')}}"></script>
 <script src="{{asset('backend/assets/js/datatables-demo.js')}}"></script>
+<!-- Page level plugins -->
+
+
+<!-- Page level custom scripts -->
+<script src="{{asset('backend/assets/js/chart-area-demo.js')}}"></script>
+<script src="{{asset('backend/assets/js/chart-pie-demo.js')}}"></script>
 
 
 

@@ -20,12 +20,12 @@
 
 {{-- section la 1 khoi de luu tru du lieu => khong hien thi => dung @yield() de hien thi section do --}}
 @section('frontend_content')
-<h1>ahihihihi</h1>
+
 <div class="body-content">
     <div class="container">
-        <div class="row">
+        <div class="row front-dashboard-wrap">
             @include('frontend.profile.user-sidebar')
-            <div class="col-md-10">
+            <div class="col-md-9">
                 Welcome To {{ env('APP_NAME') }} <strong>{{ Auth::user()->name }}</strong>
                 @yield('userdashboard_content')
             </div>

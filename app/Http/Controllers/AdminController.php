@@ -61,6 +61,9 @@ class AdminController extends Controller
 
     }
 
+    public function index(){
+        
+    }
 
 
     public function loginForm()

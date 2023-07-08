@@ -27,8 +27,9 @@ class AdminProfileController extends Controller
 
     public function AdminProfileEdit()
     {
+        $adminData = Admin::find(1);
         $editData = Admin::find(1);
-        return view('admin.Profile.edit', compact('editData'));
+        return view('admin.Profile.edit', compact('editData', 'adminData'));
     }
 
     /**
@@ -58,10 +59,10 @@ class AdminProfileController extends Controller
      * @param  int  $id
      * //@return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -104,12 +105,14 @@ class AdminProfileController extends Controller
             'alert-type' => 'success'
         ];
 
+
         return redirect()->route('profile.index')->with($notification);
     }
 
     public function AdminPasswordChange()
     {
-        return view('admin.Profile.change_password');
+        $adminData = Admin::find(1);
+        return view('admin.Profile.change_password', compact('adminData'));
     }
 
     public function AdminPasswordUpdate(AdminPasswordUpdateRequest $request)

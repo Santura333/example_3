@@ -12,6 +12,8 @@ use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CartPageController;
 
+use App\Models\Admin;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -101,15 +103,31 @@ Route::middleware(['auth:admin'])->group(function () {
 
     // Admin Dashboard routes
     Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
-        return view('admin.index');
+        $adminData = Admin::find(1);
+        return view('admin.index', compact('adminData'));
     })->name('admin.dashboard');
+
+    // Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
+    //     $adminData = Admin::find(1);
+    //     return view('admin.index', compact('adminData'));
+    // })->name('admin.dashboard');
 
     // Admin Dashboard all functionality/features routes
     Route::prefix('/admin')->group(function () {
+
         Route::resource('/user', UserController::class);
-        // Route::get('/edit', [UserController::class, 'userEdit'])->name('user.edit');
-        // Route::get('/destroy', [UserController::class, 'destroy'])->name('user.destroy');
-        // Route::get('/update', [UserController::class, 'update'])->name('user.update');
+        Route::get('/edit/user/{user}', [UserController::class, 'UserProfileEdit'])->name('admin.user.edit');
+
+        //Route::put('user/{user}', [UserController::class, 'index']);
+        //Route::post('/user', [UserController::class, 'update'])->name('user.index');
+        // Route::get('/user', [UserController::class, 'index'])->name('user.index');
+        // Route::get('/edit/user', [UserController::class, 'userEdit'])->name('user.UserEdit');
+        // Route::post('/edit/user', [UserController::class, 'userUpdate'])->name('user.UserUpdate');
+        //Route::get('/destroy', [UserController::class, 'destroy'])->name('user.destroy');
+        // Route::get('/user', [UserController::class, 'edit'])->name('user.update');
+        //Route::post('/{id}/edit', [UserController::class, 'update1'])->name('user.update1');
+        // admin/user/7
+
     });
 
 });
