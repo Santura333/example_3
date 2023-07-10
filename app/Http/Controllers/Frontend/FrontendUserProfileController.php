@@ -111,7 +111,7 @@ class FrontendUserProfileController extends Controller
                 'message' => 'Password Updated Successfully!!!',
                 'alert-type' => 'success'
             ];
-            return redirect()-> refresh() -> route('user.logout')->with($notification);
+            return redirect()->route('user.logout')->with($notification);
         } else {
             $notification = [
                 'message' => 'Please provide valid password',

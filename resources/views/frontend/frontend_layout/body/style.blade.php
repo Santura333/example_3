@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/style.css">
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/aside.css">
+<link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/form.css">
 
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/font-awesome.css">

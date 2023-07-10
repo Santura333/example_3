@@ -611,3 +611,19 @@ h6,
 .navbar.navbar-expand-lg {
     background-color: black;
 }
+
+.sidebar .nav-item .nav-link .img-profile,
+.topbar .nav-item .nav-link .img-profile {
+  height: 2rem;
+  width: 2rem;
+}
+
+ .img-profile,
+ .img-profile {
+  height: 3rem;
+  width: 3rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+  }

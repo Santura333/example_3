@@ -1,6 +1,7 @@
 
 .front-dashboard-wrap{
     padding-top: 150px;
+    
 }
 /* .sidebar-wrap{
     background-color: #EAA636;
@@ -13,7 +14,7 @@
     position:relative;
     height:40px;
     line-height:40px;
-    margin-top:10px;
+    margin-bottom:10px;
     overflow:hidden;
     width:90%;
     margin-left:5%;

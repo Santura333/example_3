@@ -9,7 +9,7 @@
         <a href="{{ route('user.logout') }}" class="btn btn-primary btn-sm btn-block">Logout</a>
     </ul> --}}
 
-    <div class="container bg-dark">
+    <div class="container bg-dark" style="border-radius: 10px;">
         <div class="link">
             <div class="text"> <a href="{{ route('dashboard') }}" class="">Home</a>
             </div>

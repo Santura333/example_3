@@ -7,6 +7,7 @@
                     <li class="breadcrumb-item"><a class="nav-item nav-link">Home</a></li>
                     <li class="breadcrumb-item"><a class="small text-light" href="frontend/layouts"></a></li>
                 </ol>
+
         </div>
         <div class="col-lg-6 px-5 text-end">
             <small>Follow us:</small>
@@ -50,13 +51,22 @@
         <div class=" d-none d-lg-flex">
             <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
 
-                <a href="tel:+123456789">
+                {{-- <a href="tel:+123456789">
                     <i class="fa fa-phone text-primary"></i>
-                </a>
+                </a> --}}
+                <img class="img-profile rounded-circle"
+                    src="{{ !empty($user->profile_photo_path) ? url('storage/profile-photos/'.$user->profile_photo_path) : url('upload/admin_images/blank_profile_photo.jpg') }}"
+                    alt="">
             </div>
             <div class="ps-3">
-                <small class="text-primary mb-0">Call Us</small>
-                <p class="text-light fs-5 mb-0">+012 345 6789</p>
+
+                <small class="text-primary mb-0">Welcome</small>
+                {{-- <a class="nav-link " href="#">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ $user->name }}</span>
+                </a> --}}
+                {{-- <p class="text-light fs-5 mb-0">+012 345 6789</p> --}}
+                <p class="text-light fs-5 mb-0">{{$user->name}}</p>
+
             </div>
         </div>
     </div>
